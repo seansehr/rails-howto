@@ -1,0 +1,10 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: "list 1"
+  id: 1
+
+two:
+  title: "list 2"
+  id: 2

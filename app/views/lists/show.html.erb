@@ -1,0 +1,47 @@
+<p>
+  <strong>Title:</strong>
+  <%= @list.title %>
+</p>
+
+<% i = 0 
+  if @list.tasks %>
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Task</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @list.tasks.each do |task| %>
+        <tr>
+          <td><%= i += 1 %>
+          <td><%= task.task %></td>
+          <td><%= link_to 'Edit', edit_list_task_path(@list, task) %></td>
+          <td><%= link_to 'Destroy', list_task_path(@list, task), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<h2>Add Task</h2>
+
+<%= form_for([@list, @list.tasks.build]) do |f| %>
+
+  <div class="field">
+    <%= f.label :task %><br>
+    <%= f.text_field :task %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>

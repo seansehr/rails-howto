@@ -1,0 +1,22 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  task: "list 1 task 1"
+  list_id: 1
+  id: 1
+
+two:
+  task: "list 1 task 2"
+  list_id: 1
+  id: 2
+
+three:
+  task: "list 2 task 1"
+  list_id: 2
+  id: 3
+
+four:
+  task: "list 2 task 2"
+  list_id: 2
+  id: 4

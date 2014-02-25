@@ -9,12 +9,9 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
-  # GET /lists/1/edit
   def edit
   end
 
-  # POST /lists
-  # POST /lists.json
   def create
     save_params = task_params
     save_params["list_id"] = params[:list_id]
@@ -32,8 +29,6 @@ class TasksController < ApplicationController
     end
   end
 
-  # PATCH/PUT /lists/1
-  # PATCH/PUT /lists/1.json
   def update
     respond_to do |format|
       save_params = task_params
@@ -48,8 +43,6 @@ class TasksController < ApplicationController
     end
   end
 
-  # DELETE /lists/1
-  # DELETE /lists/1.json
   def destroy
     task = @task
     @task.destroy
